@@ -32,11 +32,14 @@ $(document).ready(function(){
   );
 });
 
+
+
 // creare funzione che se il numero e <= 5 il quadrato è giallo se maggiore verde
 function stampaNumero(num, div) {
   if (num <= 5) {
     $(div).addClass("yellow");
   } else {
+    $(div).removeClass("yellow");
     $(div).addClass("green");
   }
 }

@@ -2,17 +2,12 @@ $(document).ready(function(){
   // creare evento click sulla cella della tabella
   $(".square").click(
     function() {
-      // // nascondo gli tutti gli span al click
-      // $(".square").addClass("hide");
-      // // mostro solo lo span del box del click
-      // $(this).removeClass("hide");
+      // creare la variabile del quadrato this
       var quadrato = $(this);
-
+      // creare la variabile delloo span di this
       var numPrint = $(this).find("span");
 
-
-
-
+      // chiamata ajax per prendere numero generato do 1 a 9
       $.ajax(
         {
         "url": "https://flynn.boolean.careers/exercises/api/random/int",

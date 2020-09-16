@@ -22,6 +22,7 @@
   width: calc(100% / 6);
   border: 1px solid black;
   height: 100px;
+  background-color: pink;
 }
 
 .green {
@@ -30,4 +31,8 @@
 
 .yellow{
   background-color: yellow;
+}
+
+.square.hide span {
+  display: none;
 }

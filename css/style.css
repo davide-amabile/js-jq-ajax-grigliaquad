@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding : 0;
+  margin : 0;
+}
+/* setclassi */
+.flex {
+  display: flex;
+}
+
+
+.container {
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.line{
+  width: 100%;
+}
+
+.square {
+  width: calc(100% / 6);
+  border: 1px solid black;
+  height: 100px;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow{
+  background-color: yellow;
+}

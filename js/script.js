@@ -2,11 +2,13 @@ $(document).ready(function(){
   // creare evento click sulla cella della tabella
   $(".square").click(
     function() {
-      // nascondo gli tutti gli span al click
-      $(".square").addClass("hide");
-      // mostro solo lo span del box del click
-      $(this).removeClass("hide");
+      // // nascondo gli tutti gli span al click
+      // $(".square").addClass("hide");
+      // // mostro solo lo span del box del click
+      // $(this).removeClass("hide");
       var quadrato = $(this);
+
+      var numPrint = $(this).find("span");
 
 
 
@@ -17,7 +19,7 @@ $(document).ready(function(){
         "method": "GET",
         "success": function (data, stato) {
         // stampo nello span il numero che viene generato
-          $("span").text(data.response);
+          numPrint.text(data.response);
           // cambio colore se il numero in base alla grandezza del stampaNumero
            stampaNumero(data.response, quadrato);
         },

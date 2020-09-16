@@ -6,6 +6,7 @@ $(document).ready(function(){
       $(".square").addClass("hide");
       // mostro solo lo span del box del click
       $(this).removeClass("hide");
+      var quadrato = $(this);
 
 
 
@@ -17,6 +18,8 @@ $(document).ready(function(){
         "success": function (data, stato) {
         // stampo nello span il numero che viene generato
           $("span").text(data.response);
+          // cambio colore se il numero in base alla grandezza del stampaNumero
+           stampaNumero(data.response, quadrato);
         },
         "error": function (richiesta, stato, errori) {
         alert("E' avvenuto un errore. " + errore);
@@ -30,10 +33,10 @@ $(document).ready(function(){
 });
 
 // creare funzione che se il numero e <= 5 il quadrato è giallo se maggiore verde
-function stampaNumero(num) {
+function stampaNumero(num, div) {
   if (num <= 5) {
-    $(".square").addClass("yellow");
+    $(div).addClass("yellow");
   } else {
-    $(".square").addClass("green");
+    $(div).addClass("green");
   }
 }
